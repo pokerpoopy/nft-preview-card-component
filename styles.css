@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* ### Primary */
+
+:root {
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+--main-bg: hsl(217, 54%, 11%);
+--card-bg: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    padding: 5.5rem 1.5rem 0 1.5rem;
+}
+
+.card-wrapper {
+    background-color: var(--card-bg);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-radius: 1.25rem;
+}
+
+.card-wrapper .main-img {
+    position: relative;
+    cursor: pointer;
+}
+
+.card-wrapper .main-img img {
+    max-width: 100%;
+    border-radius: .7rem;
+}
+
+.card-wrapper .main-img div {
+    background-color: hsl(178, 100%, 50%, 55%) ;
+    position: absolute;
+    height: calc(100% - 4px);
+    width: 100%;
+    z-index: 999;
+    top:0;
+    border-radius: .7rem;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.card-wrapper .main-img div:hover {
+    opacity: 1;
+}
+
+
+.card-wrapper .main-img div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-1.35rem, -1.65rem);
+}
+
+.card-wrapper h2 {
+    color: var(--white);
+    font-weight: 600;
+    padding-top: 1.5rem;
+    transition: .3s ease-in-out;
+    cursor:pointer;
+}
+
+.card-wrapper h2:hover {
+    color:var(--cyan);
+}
+
+.card-wrapper p {
+    color:var(--soft-blue);
+    font-weight: 300;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.card-wrapper ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.card-wrapper ul li {
+    font-weight: 400;
+    color:var(--soft-blue);
+    display:flex;
+    align-items: center;
+    gap: .65rem;
+}
+.card-wrapper ul li:first-child {
+    color:var(--cyan);
+}
+footer {
+    font-weight: 300;
+    display:flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding-top: .5rem;
+}
+
+.card-wrapper footer img {
+    width: 2.2rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+footer span {
+    color: var(--white);
+    transition: .3s ease-in-out;
+    cursor:pointer;
+}
+
+footer span:hover {
+    color:var(--cyan);
+}
+
+.attribution { padding-top: .5rem; font-size: 12px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 500px) {
+    .card-wrapper {
+        width: 450px;
+        margin: 0 auto;
+    }
+}
